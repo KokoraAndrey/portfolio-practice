@@ -1,0 +1,8 @@
+@use '../base';
+@use '../helpers' as *;
+
+h1 {
+    @include fluid-text(48, 32);
+}
+
+

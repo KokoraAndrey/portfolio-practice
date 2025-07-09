@@ -1,0 +1,24 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --neutral: #404040;
+    --gray-light: #d4d4d4d8;
+    --gray-dark: #71717a;
+    --error: #ef4444;
+
+    --border-radius-s: 4px;
+    --border-radius-m: 19px;
+    --border-radius-l: 20px;
+    --border: 2px solid var(--black);
+    --border-cards: 1px solid var(var(--grey-dark));
+
+    --transition-duration: 0.2s;
+
+    --font-family: 'Sora-Regular', sans-serif;
+
+    --container-width: 1217px;
+    --container-padding-x: 16px;
+
+    --input-height: 56px;
+    --button-height: 56px;
+}
