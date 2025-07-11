@@ -1,0 +1,37 @@
+.button {
+    position: relative;
+    padding: 16px 20px;
+    background-color: var(--black);
+    color: var(--white);
+    height: var(--button-height);
+    border: none;
+    border-radius: var(--border-radius-s);
+
+    font-family: 'Sora-Semi';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--gray-dark);
+        transition-duration: var(--transition-duration);
+    }
+
+    &--download {
+        padding-right: 49px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 17.5px;
+            right: 22.5px;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url(../../icons/header/download.svg);
+        }
+    }
+}

@@ -260,8 +260,111 @@ h1 {
   font-size: clamp(28px, 3.3333333333vw, 48px);
 }
 
-h1 {
-  font-size: clamp(32px, 3.3333333333vw, 48px);
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  padding-top: 32px;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+.header__link {
+  font-family: "Sora-Semi";
+  font-size: 20px;
+  color: var(--black);
+}
+.header__link:hover {
+  color: currentColor;
+  transition-duration: var(transition-duration);
+  cursor: pointer;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header__burger {
+  border: none;
+  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.header__line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--black);
+  box-shadow: 0 7px 0 var(--black), 0 -7px 0 var(--black);
+}
+
+.button {
+  position: relative;
+  padding: 16px 20px;
+  background-color: var(--black);
+  color: var(--white);
+  height: var(--button-height);
+  border: none;
+  border-radius: var(--border-radius-s);
+  font-family: "Sora-Semi";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--gray-dark);
+  transition-duration: var(--transition-duration);
+}
+.button--download {
+  padding-right: 49px;
+}
+.button--download::after {
+  content: "";
+  position: absolute;
+  top: 17.5px;
+  right: 22.5px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../icons/header/download.svg);
 }
 
 /*# sourceMappingURL=style.css.map */
