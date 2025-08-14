@@ -1,37 +1,76 @@
-.button {
-    position: relative;
-    padding: 16px 20px;
-    background-color: var(--black);
-    color: var(--white);
-    height: var(--button-height);
-    border: none;
-    border-radius: var(--border-radius-s);
+@use '../helpers' as *;
 
-    font-family: 'Sora-Semi';
+.button {
+  position: relative;
+  z-index: 0;
+  padding: 16px 20px;
+  background-color: var(--black);
+  color: var(--white);
+  height: var(--button-height);
+  border: none;
+  border-radius: var(--border-radius-s);
+
+  @include mobile {
+    height: auto;
+    padding: 16.5px;
+  }
+
+  cursor: pointer;
+
+  &--text {
+    font-family: 'Sora-Semi', sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
 
-    cursor: pointer;
-
-    &:hover {
-        background-color: var(--gray-dark);
-        transition-duration: var(--transition-duration);
+    @media (max-width: 914px) {
+      font-size: 16px;
     }
 
-    &--download {
-        padding-right: 49px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 17.5px;
-            right: 22.5px;
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            background-image: url(../../icons/header/download.svg);
-        }
+    @include mobile {
+      display: none;
+      visibility: hidden;
     }
+  }
+
+  @include hover {
+    background-color: var(--neutral);
+    transition-duration: var(--transition-duration);
+  }
+
+
+  &--download {
+    padding-right: 49px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 17.5px;
+      right: 22.5px;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-image: url(../../icons/header/download.svg);
+    }
+
+    @media (max-width: 914px) {
+      padding-right: 20px;
+      font-size: 16px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding-right: 16.5px;
+      &::after {
+        display: block;
+        top: 50%;
+        right: 50%;
+        translate: 50% -50%;
+      }
+    }
+  }
 }
