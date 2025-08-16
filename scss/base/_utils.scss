@@ -1,4 +1,4 @@
-@use '../helpers/media' as *;
+@use '../helpers' as *;
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
@@ -29,4 +29,37 @@
   @include mobile-above {
     display: none !important;
   }
+}
+
+.title {
+  font-size: var(--font-size-title-xl);
+  line-height: 56px;
+  color: var(--black);
+  font-weight: 400;
+
+  &--bold {
+    font-weight: 800;
+  }
+
+  &--outlined {
+    font-weight: 800;
+    color: var(--white);
+    text-shadow: 2px 2px 0 black,
+    -2px 2px 0 black,
+    2px -2px 0 black,
+    -2px -2px 0 black,
+    2px 0 0 black,
+    -2px 0 0 black,
+    0 2px 0 black,
+    0 -2px 0 black;
+
+  }
+
+  @include mobile {
+    font-size: var(--font-size-title-l);
+  }
+
+  @media (max-width: 519px) {
+      font-size: var(--font-size-title-s);
+    }
 }

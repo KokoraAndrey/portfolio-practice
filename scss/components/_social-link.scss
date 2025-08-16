@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+@use "../base" as *;
+
+.social-link {
+  width: 56px;
+  aspect-ratio: 1/1;
+  border: var(--border);
+  border-radius: var(--border-radius-s);
+  transition: var(--transition-duration);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--black);
+
+    svg {
+      path {
+        fill: var(--white);
+      }
+    }
+  }
+}
+  
+  
