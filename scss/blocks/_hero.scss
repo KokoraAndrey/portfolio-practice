@@ -5,9 +5,18 @@
 .hero {
   &__wrapper {
     display: flex;
+    margin-bottom: 180px;
 
     @media (max-width: 1652px) {
       flex-direction: column-reverse;
+    }
+
+    @include tablet {
+      margin-bottom: 140px;
+    }
+
+    @include mobile {
+      margin-bottom: 100px;
     }
 
   }

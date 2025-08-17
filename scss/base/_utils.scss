@@ -37,6 +37,10 @@
   color: var(--black);
   font-weight: 400;
 
+  &--white {
+    color: var(--white);
+  }
+
   &--bold {
     font-weight: 800;
   }

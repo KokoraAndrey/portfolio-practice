@@ -144,10 +144,6 @@ label {
    (за исключением тех, у которых уже указан
    атрибут fill со значением 'none' или начинается с 'url')
   */
-:where([fill]:not([fill=none], [fill^=url])) {
-  fill: currentColor;
-}
-
 /**
    Приводим к единому цвету svg-элементы
    (за исключением тех, у которых уже указан
@@ -244,7 +240,6 @@ body {
   line-height: 1.5;
   color: var(--gray-dark);
   background-color: var(--white);
-  overflow: hidden;
 }
 
 a,
@@ -300,6 +295,9 @@ h1 {
   line-height: 56px;
   color: var(--black);
   font-weight: 400;
+}
+.title--white {
+  color: var(--white);
 }
 .title--bold {
   font-weight: 800;
@@ -434,10 +432,21 @@ h1 {
 
 .hero__wrapper {
   display: flex;
+  margin-bottom: 180px;
 }
 @media (max-width: 1652px) {
   .hero__wrapper {
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 1023px) {
+  .hero__wrapper {
+    margin-bottom: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__wrapper {
+    margin-bottom: 100px;
   }
 }
 .hero__content {
@@ -560,6 +569,98 @@ h1 {
   .hero__banner {
     height: 332px;
   }
+}
+
+.skills__wrapper {
+  margin-bottom: 100px;
+}
+@media (max-width: 1023px) {
+  .skills__wrapper {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .skills__wrapper {
+    margin-bottom: 40px;
+  }
+}
+.skills__title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .skills__title {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 560px) {
+  .skills__title {
+    margin-bottom: 40px;
+  }
+}
+.skills__container {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 71px;
+}
+@media (max-width: 1023px) {
+  .skills__container {
+    gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .skills__container {
+    gap: 20px;
+  }
+}
+.skills__item {
+  border: var(--border);
+  width: 100%;
+  max-width: 186px;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius-s);
+  padding: 32px 0 37px 0;
+  text-align: center;
+  transition-duration: var(--transition-duration);
+}
+.skills__item:hover {
+  background-color: var(--black);
+}
+.skills__item:hover svg path {
+  fill: var(--white);
+}
+.skills__item:hover .icon-two-path svg path:first-child {
+  fill: var(--white);
+}
+.skills__item:hover .icon-two-path svg path:last-child {
+  fill: var(--black);
+}
+.skills__item:hover .skills__name {
+  color: var(--white);
+}
+@media (max-width: 767px) {
+  .skills__item {
+    max-width: 161px;
+    padding: 24px 0 24px 0;
+  }
+}
+.skills svg {
+  display: block;
+}
+.skills__icon {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills__name {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .button {
