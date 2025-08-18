@@ -368,14 +368,28 @@ h1 {
   }
 }
 .header__link {
+  position: relative;
   font-family: "Sora-Semi";
   font-size: 20px;
   color: var(--black);
+  transition-duration: var(transition-duration);
+}
+.header__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--neutral);
+  transition-duration: 0.5s;
 }
 .header__link:hover {
   color: var(--neutral);
-  transition-duration: var(transition-duration);
   cursor: pointer;
+}
+.header__link:hover::before {
+  width: 100%;
 }
 @media (max-width: 914px) {
   .header__link {
