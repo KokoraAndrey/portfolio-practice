@@ -4,17 +4,19 @@
   --neutral: #404040;
   --gray-light: #d4d4d4d8;
   --gray-dark: #71717a;
+  --gray-zinc: #27272a;
   --error: #ef4444;
 
   --font-size-title-xl: 48px;
   --font-size-title-l: 38px;
   --font-size-title-s: 28px;
+  --font-size-cards: 24px;
 
   --border-radius-s: 4px;
   --border-radius-m: 19px;
   --border-radius-l: 20px;
   --border: 2px solid var(--black);
-  --border-cards: 1px solid var(var(--grey-dark));
+  --border-cards: 1px solid var(--gray-zinc);
 
   --transition-duration: 0.2s;
 

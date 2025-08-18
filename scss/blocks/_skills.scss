@@ -2,115 +2,113 @@
 
 .skills {
 
-    &__wrapper {
-        margin-bottom: 100px;   
+  &__wrapper {
+    margin-bottom: 100px;
 
-        @include tablet {
-            margin-bottom: 70px;
-        }
-
-        @include mobile {
-            margin-bottom: 40px;
-        }
+    @include tablet {
+      margin-bottom: 70px;
     }
 
-    &__title {
-        text-align: center;
-        margin-bottom: 80px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
 
-        @include mobile {
-            margin-bottom: 60px;
-        }
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
 
-        @media (max-width: 560px) {
-            margin-bottom: 40px;
-        }
+    @include mobile {
+      margin-bottom: 60px;
     }
 
-    &__container {
-        color: var(--black);
+    @media (max-width: 560px) {
+      margin-bottom: 40px;
+    }
+  }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 71px;
+  &__container {
+    color: var(--black);
 
-        @include tablet {
-            gap: 50px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 71px;
 
-        @include mobile {
-            gap: 20px;
-        }
-
-     }
-
-    &__item {
-        border: var(--border);
-        width: 100%;
-        max-width: 186px;
-        aspect-ratio: 1/1;     
-        border-radius: var(--border-radius-s);
-        padding: 32px 0 37px 0;
-        text-align: center;
-        transition-duration: var(--transition-duration);
-
-        &:hover {
-            background-color: var(--black);
-
-            svg {
-                path {
-                    fill: var(--white);
-                }
-            }
-
-            .icon-two-path {
-
-                svg {
-                    path:first-child {
-                        fill: var(--white)
-                    }
-    
-                    path:last-child {
-                        fill: var(--black)
-                    }
-                }
-            }
-
-
-            
-            
-            .skills__name {
-                color: var(--white);
-            }
-        }
-
-        @include mobile {
-            max-width: 161px;
-            padding: 24px 0 24px 0;
-        }
-        
+    @include tablet {
+      gap: 50px;
     }
 
-    svg {
-        display: block;
+    @include mobile {
+      gap: 20px;
     }
 
-    &__icon {
-        width: 100%;
-        height: 56px;
-        margin-bottom: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
+  }
+
+  &__item {
+    border: var(--border);
+    width: 100%;
+    max-width: 186px;
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius-s);
+    padding: 32px 0 37px 0;
+    text-align: center;
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      background-color: var(--black);
+
+      svg {
+        path {
+          fill: var(--white);
+        }
+      }
+
+      .icon-two-path {
+
+        svg {
+          path:first-child {
+            fill: var(--white)
+          }
+
+          path:last-child {
+            fill: var(--black)
+          }
+        }
+      }
+
+
+      .skills__name {
+        color: var(--white);
+      }
     }
 
-    &__name {
-        font-size: 20px;
-        font-weight: 700;
+    @include mobile {
+      max-width: 161px;
+      padding: 24px 0 24px 0;
     }
+
+  }
+
+  svg {
+    display: block;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+  }
 
 
 }

@@ -32,12 +32,12 @@
     @include mobile {
       padding-top: 48px;
     }
-    
+
     @media (max-width: 525px) {
       padding-top: 0;
     }
   }
-  
+
   &__title-line {
     position: relative;
     width: 600px;
@@ -48,12 +48,12 @@
 
     @include mobile {
       gap: 15px;
-    } 
+    }
 
     @media (max-width: 519px) {
       gap: 0;
     }
-    
+
   }
 
   &__name, &__location {
@@ -76,11 +76,11 @@
     margin-bottom: 94px;
 
     @include mobile {
-      margin-bottom: 50px;       
+      margin-bottom: 50px;
     }
 
     @media (max-width: 519px) {
-      margin-bottom: 36px; 
+      margin-bottom: 36px;
     }
   }
 
@@ -94,7 +94,7 @@
 
   &__banner {
     position: absolute;
-    top:215px;
+    top: 215px;
     right: 345px;
     width: 800px;
     height: 600px;
@@ -109,20 +109,20 @@
       background-size: contain;
       background-repeat: no-repeat;
 
-        @media (max-width: 1652px) {
-          margin-inline: auto;
-          max-width: 800px;
-          max-height: 450px;
-        }
+      @media (max-width: 1652px) {
+        margin-inline: auto;
+        max-width: 800px;
+        max-height: 450px;
+      }
 
-        @media (max-width: 741px) {
-          width: 450px;
-          height: 330px;
-        }
-        @media (max-width: 741px) {
-          width: 330px;
-          height: 330px;
-        }
+      @media (max-width: 741px) {
+        width: 450px;
+        height: 330px;
+      }
+      @media (max-width: 741px) {
+        width: 330px;
+        height: 330px;
+      }
     }
 
     @media (max-width: 1652px) {
@@ -132,9 +132,9 @@
     }
 
     @media (max-width: 741px) {
-          height: 332px;
-        }
+      height: 332px;
+    }
   }
 
-  
+
 }

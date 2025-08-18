@@ -1,0 +1,143 @@
+@use "../base" as *;
+@use "../helpers" as *;
+
+.experience {
+  background-color: var(--black);
+
+  &__inner {
+    padding: 80px 0 100px 0;
+    text-align: center;
+    width: 100%;
+
+    @include tablet {
+      padding: 70px 0 80px 0;
+    }
+
+    @include mobile {
+      padding: 60px 0 70px 0;
+    } 
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 100px;
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 40px;
+    } 
+  }
+
+  &__list {
+    padding: 0 24px 0;
+
+    @include tablet {
+      padding: 0 12px 0;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    display: block;
+    border: var(--border-cards);
+    border-radius: 10px;
+    padding: 30px 24px 30px 24px;
+    text-align: start;
+    transition-duration: var(--transition-duration);
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      background-color: var(--gray-zinc);
+    }
+  }
+
+  &__post {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 62px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 30px;
+    }
+
+    &--google {
+      &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 32px;
+      aspect-ratio: 1/1;
+      background-image: url(../../icons/experience/google.svg);
+      }
+    }
+
+    &--youtube {
+      &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 32px;
+      aspect-ratio: 1/1;
+      background-image: url(../../icons/experience/youtube.svg);
+      }
+    }
+    &--apple {
+      &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 32px;
+      aspect-ratio: 1/1;
+      background-image: url(../../icons/experience/apple.svg);
+      }
+    }
+
+  }
+
+  &__position {
+    color: var(--white);
+    font-size: var(--font-size-cards);
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__data {
+    color: var(--gray-light);
+    font-weight: 600;
+
+  }
+
+  &__description {
+    color: var(--gray-light);
+    line-height: 1.5;
+    letter-spacing: 0.02em
+  }
+}
