@@ -61,13 +61,11 @@
   }
 
   &__post {
-    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding-left: 62px;
     margin-bottom: 30px;
 
     @include mobile {
@@ -75,6 +73,17 @@
       align-items: start;
       row-gap: 30px;
     }
+
+    
+
+  }
+
+  &__position {
+    position: relative;
+
+    color: var(--white);
+    font-size: var(--font-size-cards);
+    padding-left: 62px;
 
     &--google {
       &::before {
@@ -101,6 +110,7 @@
       background-image: url(../../icons/experience/youtube.svg);
       }
     }
+
     &--apple {
       &::before {
       content: "";
@@ -113,12 +123,6 @@
       background-image: url(../../icons/experience/apple.svg);
       }
     }
-
-  }
-
-  &__position {
-    color: var(--white);
-    font-size: var(--font-size-cards);
 
     @include tablet {
       font-size: 22px;

@@ -739,11 +739,9 @@ h1 {
   background-color: var(--gray-zinc);
 }
 .experience__post {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 62px;
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
@@ -753,7 +751,13 @@ h1 {
     row-gap: 30px;
   }
 }
-.experience__post--google::before {
+.experience__position {
+  position: relative;
+  color: var(--white);
+  font-size: var(--font-size-cards);
+  padding-left: 62px;
+}
+.experience__position--google::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -763,7 +767,7 @@ h1 {
   aspect-ratio: 1/1;
   background-image: url(../../icons/experience/google.svg);
 }
-.experience__post--youtube::before {
+.experience__position--youtube::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -773,7 +777,7 @@ h1 {
   aspect-ratio: 1/1;
   background-image: url(../../icons/experience/youtube.svg);
 }
-.experience__post--apple::before {
+.experience__position--apple::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -782,10 +786,6 @@ h1 {
   width: 32px;
   aspect-ratio: 1/1;
   background-image: url(../../icons/experience/apple.svg);
-}
-.experience__position {
-  color: var(--white);
-  font-size: var(--font-size-cards);
 }
 @media (max-width: 1023px) {
   .experience__position {
@@ -805,6 +805,58 @@ h1 {
   color: var(--gray-light);
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.about-me__wrapper {
+  display: flex;
+  row-gap: 81px;
+  padding-top: 60px;
+  padding-bottom: 85px;
+}
+@media (max-width: 1140px) {
+  .about-me__wrapper {
+    flex-direction: column;
+    row-gap: 60px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .about-me__wrapper {
+    row-gap: 40px;
+    padding-bottom: 60px;
+  }
+}
+.about-me__image {
+  background-image: url(../../images/about-me/about-me.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 525px;
+  margin-right: 10px;
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  .about-me__image {
+    margin-right: 0;
+  }
+}
+.about-me__profile {
+  padding-top: 20px;
+  max-width: 600px;
+}
+@media (max-width: 1140px) {
+  .about-me__profile {
+    max-width: 1000px;
+    padding-top: 0;
+  }
+}
+.about-me__title {
+  margin-bottom: 40px;
+}
+.about-me p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .button {

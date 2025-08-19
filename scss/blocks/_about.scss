@@ -1,0 +1,77 @@
+@use "../base" as *;
+@use "../helpers" as *;
+
+.about-me {
+
+    &__wrapper {
+        display: flex;
+        row-gap: 81px;
+        padding-top: 60px;
+        padding-bottom: 85px;
+        
+        @media (max-width: 1140px) {
+            flex-direction: column;
+            row-gap: 60px;
+            padding-bottom: 70px;
+        }
+        
+        @include mobile {
+            row-gap: 40px;
+            padding-bottom: 60px;
+        }
+
+        
+        
+    }
+    
+    &__image {
+        background-image: url(../../images/about-me/about-me.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+        max-width: 525px;
+        margin-right: 10px;
+        margin-inline: auto;
+
+        @include mobile {
+            margin-right: 0;
+        }
+
+        
+       
+
+    }
+    &__profile {
+        padding-top: 20px;
+        max-width: 600px;
+        
+        @media (max-width: 1140px) {
+            max-width: 1000px;   
+            padding-top: 0;
+        }
+
+        
+
+        
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    
+    p {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+        
+    
+
+
+
+
+
+}
