@@ -36,12 +36,8 @@
         margin-inline: auto;
 
         @include mobile {
-            margin-right: 0;
+            margin: 0 auto;
         }
-
-        
-       
-
     }
     &__profile {
         padding-top: 20px;
