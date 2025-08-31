@@ -1,0 +1,138 @@
+@use "../helpers" as *;
+
+.testimonials {
+    padding: 80px 0 180px 0;
+
+    @include tablet {
+        padding: 70px 0 150px 0;
+    }
+
+    @include mobile {
+        padding: 60px 0 120px 0;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include tablet {
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px 0 24px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__item {
+        max-width: 370px;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 16px -6px rgba(24, 39, 75, 0.08), 0 6px 8px -6px rgba(24, 39, 75, 0.12);
+        text-align: center;
+        transition: background-color var(--transition-duration);
+
+        @include hover {
+            background-color: var(--black);
+
+            .testimonials__quotes {
+                background-color: var(--white);
+
+                svg {
+                    path {
+                        fill: var(--black)
+                    }
+                }
+            }
+
+            .testimonials__text {
+                color: var(--white);
+
+                &::after {
+                    background-color: var(--white);
+                }
+            }
+
+            .testimonials__name, .testimonials__post {
+                color: var(--white);
+            }
+
+            
+
+        }
+
+        @media (max-width: 1207px) {
+            padding: 24px;
+            max-width: 303px;
+        }
+
+        @include tablet {
+            max-width: 500px;
+        }
+
+        
+    }
+
+    &__avatar {
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    &__img {
+        position: relative;
+        margin-inline: auto;
+    }
+
+    &__quotes {
+        position: absolute;
+        bottom: 0;
+        right: 33%;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 4px;
+    }
+
+    &__text {
+        position: relative;
+        margin-bottom: 50px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 50%;
+            bottom: -24px;
+            width: 120px;
+            height: 2px;
+            background-color: var(--black);
+            translate: 50% 0;
+        }
+    }
+
+    &__name {
+        font-size: var(--font-size-testimonials);
+        font-weight: 600;
+        margin-inline: auto;
+        margin-bottom: 24px;
+    }
+
+    &__post {
+        text-align: center;
+    }
+
+}
