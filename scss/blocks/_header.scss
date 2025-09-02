@@ -19,6 +19,10 @@
     }
   }
 
+  &__logo {
+    color: var(--black);
+  }
+
   &__menu {
     @include mobile {
       position: absolute;

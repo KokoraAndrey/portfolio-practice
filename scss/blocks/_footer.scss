@@ -1,0 +1,35 @@
+@use "../helpers" as *;
+
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+
+    &__wrapper {
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            padding: 20px 0;
+        }
+    }
+
+    &__data, &__made {
+        display: block;
+        text-align: end;
+
+        @include mobile {
+            font-size: var(--font-size-footer);
+        }
+    }
+
+    &__data {
+        margin-bottom: 12px;
+
+        @include mobile {
+            margin-bottom: 0;
+        }
+    }
+
+}

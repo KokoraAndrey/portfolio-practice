@@ -239,6 +239,7 @@ svg * {
   --font-size-cards: 24px;
   --font-size-projects: 32px;
   --font-size-testimonials: 20px;
+  --font-size-footer: 12px;
   --border-radius-s: 4px;
   --border-radius-m: 19px;
   --border-radius-l: 20px;
@@ -326,6 +327,9 @@ h1 {
   .header__inner {
     margin-bottom: 40px;
   }
+}
+.header__logo {
+  color: var(--black);
 }
 @media (max-width: 767px) {
   .header__menu {
@@ -1171,6 +1175,7 @@ h1 {
 @media (max-width: 767px) {
   .talk__inner {
     flex-direction: column;
+    margin-bottom: 60px;
   }
 }
 .talk__form {
@@ -1236,6 +1241,39 @@ h1 {
 @media (max-width: 767px) {
   .talk__email {
     margin-bottom: 12px;
+  }
+}
+
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+.footer__wrapper {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .footer__wrapper {
+    padding: 20px 0;
+  }
+}
+.footer__data, .footer__made {
+  display: block;
+  text-align: end;
+}
+@media (max-width: 767px) {
+  .footer__data, .footer__made {
+    font-size: var(--font-size-footer);
+  }
+}
+.footer__data {
+  margin-bottom: 12px;
+}
+@media (max-width: 767px) {
+  .footer__data {
+    margin-bottom: 0;
   }
 }
 
@@ -1318,6 +1356,14 @@ h1 {
     right: 50%;
     translate: 50% -50%;
   }
+}
+
+.logo {
+  width: 140px;
+  height: 40px;
+}
+.logo svg path {
+  fill: currentColor;
 }
 
 .social-link {

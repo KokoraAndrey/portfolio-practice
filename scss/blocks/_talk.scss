@@ -9,7 +9,9 @@
 
         @include mobile {
             flex-direction: column;
+            margin-bottom: 60px;
         }
+        
     }
 
     &__form {
