@@ -6,6 +6,24 @@
   --gray-dark: #71717a;
   --gray-zinc: #27272a;
   --error: #ef4444;
+  --green: #026630;
+
+  --form-text-color-default: var(--gray-dark);
+  --form-text-color-hover: var(--neutral);
+  --form-text-color-focused: var(--neutral);
+  --form-text-color-error: var(--error);
+  --form-text-color-valid: var(--green);
+  --form-text-color-filed: var(--black);
+
+  --form-border-default: 1.40px solid var(--black);
+  --form-border-error: 1.40px solid var(--error);
+  --form-border-valid: 1.40px solid var(--green);
+  --form-border-hover: 1.40px solid var(--neutral);
+
+  --form-hover-bg: #f4f4f5;
+  --form-focused-shadow: 0 4px 4px -2px rgba(24, 39, 75, 0.08), 0 2px 4px -2px rgba(24, 39, 75, 0.08);
+  --form-border-radius: 5px;
+  --form-focus-outline: 2px dashed var(--gray-dark);
 
   --font-size-title-xl: 48px;
   --font-size-title-l: 38px;

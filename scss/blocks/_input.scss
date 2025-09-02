@@ -1,0 +1,37 @@
+ .input {
+    padding: 18px 24px;
+    color: var(--form-text-color-default);
+    background-color: inherit;
+    border: var(--form-border-default);
+    border-radius: var(--form-border-radius);
+
+    &:hover {
+        color: var(--form-text-color-hover);
+        background-color: var(--form-hover-bg);
+    }
+
+    &:focus {
+        outline: none;
+        color: var(--form-text-color-focused);
+        border: var(--form-border-hover);
+        box-shadow: var(--form-focused-shadow);
+    }
+
+    &:focus-visible {
+        outline: 2px dashed var(--gray-zinc);
+        outline-offset: 4px;
+    }
+
+    &:user-valid {
+        color: var(--form-text-color-valid);
+        border: var(--form-border-valid);
+    }
+
+    &:user-invalid {
+        color: var(--form-text-error);
+        border: var(--form-border-error);
+    }
+
+    
+
+ }
